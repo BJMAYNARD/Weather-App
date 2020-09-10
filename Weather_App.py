@@ -3,7 +3,7 @@ import lxml.etree as et
 from lxml import etree
 import os
 import random
-import requests
+import urllib.request
 import pip
 
 
@@ -23,7 +23,7 @@ install_and_import('lxml')
 # Source is National Weather Service: https://w1.weather.gov/xml/current_obs/
 # Station ID codes can be found at the source URL, as well as other info about the data
 
-
+import requests
 def getWeather(stationID):
     current_weather = dict()
 
