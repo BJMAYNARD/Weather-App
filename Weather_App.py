@@ -55,15 +55,13 @@ def getWeather(stationID):
 sid = ''
 while not sid:
     sid_input = input(
-        "Weather.gov current conditions retriever\nPlease enter a station ID: ").strip().upper()
+        "Weather.gov current conditions retriever\nCodes can be found at https://w1.weather.gov/xml/current_obs/\nPlease enter a station ID: ").strip().upper()
     if re.match(r'^[A-Z]{4}$', sid_input):
         sid = sid_input
     else:
         print("-"*40)
-        print("Station IDs are in the format of 4 letters. Please try again")
-        print("Codes can be found at https://w1.weather.gov/xml/current_obs/")
-        print("-"*40)
-
+        
+     
 # Calls on the SID and display the results if they were returned
 
 data = getWeather(sid)
